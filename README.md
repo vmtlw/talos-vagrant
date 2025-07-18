@@ -26,7 +26,7 @@ talosctl -n 10.0.0.162 apply-config --insecure --file worker.yaml
 talosctl -n 10.0.0.100 apply-config --insecure --file worker.yaml
 talosctl -n 10.0.0.173 bootstrap
 talosctl -n 10.0.0.131 kubeconfig ./kubeconfig -f
-mkdir -p ~/.kube; cp ~/.kube/config ~/.kube/config-old-$(date); cp ./kubeconfig ~/.kube/config
+mkdir -p ~/.kube; cp ~/.kube/config ~/.kube/config-old-$(date +%Y-%m-%d_%H-%M_%S); cp ./kubeconfig ~/.kube/config
 kubectl get nodes -o wide
 
 
