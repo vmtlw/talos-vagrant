@@ -8,7 +8,7 @@ manual remove NAT vagrant network from virt-manager else virsh
 
 
 curl -sL https://talos.dev/install | sh
-talosctl gen config cluster.local https://10.0.0.173:6443 --install-disk /dev/vda -f 
+talosctl gen config cluster.local https://10.0.0.173:6443 --install-disk /dev/vda -f --config-patch @config_path.yaml
 
 vim controlplane.yaml and worker.yaml:
 
