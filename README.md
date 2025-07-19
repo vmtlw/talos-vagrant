@@ -19,6 +19,8 @@ network:
           busPath: "0*"
         dhcp: true
 ##########################
+export TALOSCONFIG=$(realpath ./talosconfig)
+talosctl config endpoint 10.0.0.154 10.0.0.177 10.0.0.203 10.0.0.249
 talosctl -n 10.0.0.173 apply-config --insecure --file controlplane.yaml
 talosctl -n 10.0.0.131 apply-config --insecure --file controlplane.yaml
 talosctl -n 10.0.0.234 apply-config --insecure --file controlplane.yaml
