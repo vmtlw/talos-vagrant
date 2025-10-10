@@ -31,6 +31,8 @@ talosctl -n 10.0.0.131 kubeconfig ./kubeconfig -f
 mkdir -p ~/.kube; cp ~/.kube/config ~/.kube/config-old-$(date +%Y-%m-%d_%H-%M_%S); cp ./kubeconfig ~/.kube/config
 kubectl get nodes -o wide
 
-
+talosctl upgrade -n 10.0.0.113 -e 10.0.0.154 --image ghcr.io/siderolabs/installer:latest --talosconfig=talosconfig 
+watching nodes: [10.0.0.113]
+    * 10.0.0.113: post check passed
 
 ```
