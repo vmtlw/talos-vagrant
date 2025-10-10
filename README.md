@@ -36,6 +36,6 @@ watching nodes: [10.0.0.113]
     * 10.0.0.113: post check passed
 
 talosctl upgrade-k8s --to 1.33.3 -n 10.0.0.154 -e 10.0.0.154 --talosconfig=talosconfig 
-
+https://docs.siderolabs.com/talos/v1.11/getting-started/support-matrix
 
 ```
