@@ -1,9 +1,11 @@
 ```
-apt install virt-manager nc vagrant vagrant-libvirt
+apt install virt-manager nc vagrant vagrant-libvirt libvirt-dev
 systemctl enable --now libvirtd
 create bridge br0!
+vagrant plugin install vagrant-libvirt
 modprobe tun
-vagrant up 
+
+vagrant up --provider=libvirt
 manual remove NAT vagrant network from virt-manager else virsh
 
 
